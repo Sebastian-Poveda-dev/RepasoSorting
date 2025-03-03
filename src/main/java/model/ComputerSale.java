@@ -22,19 +22,20 @@ public class ComputerSale {
     }
 
     public void sortByBrand() {
-        for (int i = 0; i < computers.size(); i++) {
+        for (int i = 1; i < computers.size(); i++) {
             Computer temporal = this.computers.get(i);
             int temp = computers.indexOf(temporal);
 
             int j = i - 1;
 
+
             while (j >= 0 && computers.get(j).compareTo(temporal) > 0) {
 
                 computers.set(j +1, computers.get(j));
-                j = temp;
+                j--;
 
             }
-            computers.set(j + 1, computers.get(j));
+            computers.set(j + 1, temporal);
         }
     }
 

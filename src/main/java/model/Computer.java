@@ -59,11 +59,11 @@ public class Computer implements Comparable<Computer> {
     @Override
     public int compareTo(Computer oc) {
 
-        if(this.brand.compareTo(oc.brand)>0) {
+        if(this.brand.compareTo(oc.getBrand())>0) {
             return 1;
         }
 
-        if(this.brand.compareTo(oc.brand)<0) {
+        if(this.brand.compareTo(oc.getBrand())<0) {
             return -1;
         }
         return 0;
